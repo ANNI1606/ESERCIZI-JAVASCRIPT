@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="Definizione">
+      <p style="color: red"><b>Definizione di funzione in JavaScript:</b></p>
+    </div>
+    <script>
+      const nuovoParagrafo = document.createElement("p");
+      nuovoParagrafo.textContent =
+        "Una funzione è un insieme di istruzioni racchiuse in un blocco di codice, che può essere contraddistinto da un nome, può accettare argomenti o parametri di ingresso e restituire valori.";
+
+      //trova l'elemento esistente nel DOM dopo il quale va inserito in nuovo paragrafo
+      const elementoEsistente = document.getElementById("Definizione");
+
+      //Inserisce nuovo paragrafo dopo elemento esistente
+      elementoEsistente.parentNode.insertBefore(
+        nuovoParagrafo,
+        elementoEsistente.nextSibling
+      );
+    </script>
+  </body>
+</html>
