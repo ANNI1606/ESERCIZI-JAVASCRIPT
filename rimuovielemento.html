@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rimuovi Elemento</title>
+  </head>
+  <body>
+    <p id="paragrafoDaRimuovere">
+      Questo è il paragrafo da rimuovere. Clicca per eliminarlo.
+    </p>
+    <script>
+      const paragrafoDaRimuovere = document.getElementById(
+        "paragrafoDaRimuovere"
+      );
+      paragrafoDaRimuovere.addEventListener("click", function () {
+        //Rimuovi l'elemento al click
+        paragrafoDaRimuovere.parentNode.removeChild(paragrafoDaRimuovere);
+      });
+    </script>
+  </body>
+</html>
