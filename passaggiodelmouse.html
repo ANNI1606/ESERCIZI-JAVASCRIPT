@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modifica colore al passaggio del mouse</title>
+    <style>
+      #paragColorato {
+        color: black;
+        transition: color 0.3s; /*transizione più fluida*/
+      }
+    </style>
+  </head>
+  <body>
+    <p id="paragColorato">Passa sopra per cambiare colore!</p>
+    <script>
+      const paragColorato = document.getElementById("paragColorato");
+      //Aggiungi gestori di eventi per il passaggio del mouse
+      paragColorato.addEventListener("mouseenter", function () {
+        paragColorato.style.color = "red";
+      });
+      paragColorato.addEventListener("mouseleave", function () {
+        paragColorato.style.color = "black";
+      });
+    </script>
+  </body>
+</html>
