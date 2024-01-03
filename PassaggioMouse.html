@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .highlighted {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="myList">
+      <li>NATALE</li>
+      <li>CAPODANNO</li>
+      <li>EPIFANIA</li>
+    </ul>
+    <script>
+      let listItems = document
+        .getElementById("myList")
+        .getElementsByTagName("li");
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].addEventListener("mouseover", function () {
+          this.classList.add("highlighted");
+        });
+        listItems[i].addEventListener("mouseout", function () {
+          this.classList.remove("highlighted");
+        });
+      }
+    </script>
+  </body>
+</html>
