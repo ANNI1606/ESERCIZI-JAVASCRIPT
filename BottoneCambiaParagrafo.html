@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOTTONECAMBIAPARAGRAFO</title>
+  </head>
+  <body>
+    <button id="btnshow">Mostra/Nascondi</button>
+    <p id="hiddenParag">Questo è il paragrafo da nascondere o mostrare</p>
+    <script>
+      document.getElementById("btnshow").addEventListener("click", function () {
+        const paragraph = document.getElementById("hiddenParag");
+        if (paragraph.style.display === "none") {
+          paragraph.style.display = "block";
+        } else {
+          paragraph.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
