@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .newClass {
+        color: red;
+        font-weight: bold;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myElement">Quanto è bello fare coding!</div>
+    <script>
+      document
+        .getElementById("myElement")
+        .addEventListener("click", function () {
+          const element = document.getElementById("myElement");
+          //Aggiunge la classe
+          element.classList.add("newClass");
+        });
+    </script>
+  </body>
+</html>
