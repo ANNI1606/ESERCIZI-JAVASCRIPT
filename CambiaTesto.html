@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambia Testo</title>
+  </head>
+  <body>
+    <p id="myParag">Testo</p>
+    <button onclick="changeText()">Cambia testo</button>
+    <script>
+      function changeText() {
+        const paragraph = document.getElementById("myParag");
+        paragraph.innerHTML = "Ciao sono Annalisa!";
+      }
+    </script>
+  </body>
+</html>
