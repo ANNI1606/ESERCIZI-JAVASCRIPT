@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modifica dimensione immagine</title>
+  </head>
+  <body>
+    <img
+      id="myImage"
+      src="digital-educational-1.jpg"
+      alt="Immagine"
+      onclick="changeSize()"
+    />
+    <script>
+      // Al click la dimensione dell'immagine cambia tra 150px e 300px
+      function changeSize() {
+        const image = document.getElementById("myImage");
+        if (image.style.width === "300px") {
+          image.style.width = "150px";
+        } else {
+          image.style.width = "300px";
+        }
+      }
+    </script>
+  </body>
+</html>
