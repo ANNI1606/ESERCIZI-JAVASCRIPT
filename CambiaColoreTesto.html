@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="myText" onclick="changeTextColor()">Less drama. More coffee.</p>
+    <script>
+      //cambia il colore del testo a nero se è rosso, altrimenti lo imposta a rosso
+      function changeTextColor() {
+        const paragraph = document.getElementById("myText");
+
+        //Viene utilizzato per dare specifiche proprietà CSS dell'elemento selezionato
+        const currentColor = window.getComputedStyle(paragraph).color;
+
+        if (currentColor === "red") {
+          paragraph.style.color = "black";
+        } else {
+          paragraph.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
