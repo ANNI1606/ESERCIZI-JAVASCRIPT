@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+    <title>menù a tendina</title>
+  </head>
+  <body>
+    <select id="menu" onchange="toggleContent()">
+      <option value="content1">Home</option>
+      <option value="content2">Chi Siamo</option>
+      <option value="content3">Contatti</option>
+    </select>
+    <div id="content1" class="hidden">
+      <p>HOME</p>
+    </div>
+    <div id="content2" class="hidden">
+      <p>CHI SIAMO</p>
+    </div>
+    <div id="content3" class="hidden">
+      <p>CONTATTI</p>
+    </div>
+    <script src="Menù.js"></script>
+  </body>
+</html>
