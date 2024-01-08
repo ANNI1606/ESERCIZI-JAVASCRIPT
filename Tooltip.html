@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Tooltip.css" />
+  </head>
+  <body>
+    <div
+      class="tooltip"
+      onmouseover="showTooltip(this)"
+      onmouseout="hideTooltip(this)"
+    >
+      <span class="tooltiptext">Tooltip personalizzato</span>
+      Passa il mouse sopra di me
+    </div>
+    <script>
+      function showTooltip(element) {
+        const tooltip = element.querySelector(".tooltiptext");
+        //Verifica che l'elemento 'tooltiptext' esista prima di accedere alle sue proprietà
+        if (tooltip) {
+          tooltip.style.visibility = "visible";
+          tooltip.style.opacity = "1";
+        }
+      }
+
+      function hideTooltip(element) {
+        const tooltip = element.querySelector(".tooltitext");
+        if (tooltip) {
+          tooltip.style.visibility = "hidden";
+          tooltip.style.opacity = "0";
+        }
+      }
+    </script>
+  </body>
+</html>

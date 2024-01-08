@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: blanchedalmond;
+  color: black;
+  text-align: center;
+  border-radius: 8px;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/*Mostra il tooltip quando il mouse è sopra l'elemento*/
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip:hover .tooltiptext p {
+  margin: 0;
+  font-size: 18px;
+}
