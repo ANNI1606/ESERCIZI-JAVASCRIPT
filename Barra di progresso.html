@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #progressBar {
+        width: 100px;
+        height: 30px;
+        background-color: blanchedalmond;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+      #progress {
+        width: 0;
+        height: 100%;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="progressBar">
+      <div id="progress"></div>
+    </div>
+    <button onclick="updateProgressBar()">PREMI PER AGGIORNARE</button>
+    <script>
+      function updateProgressBar() {
+        const progressBar = document.getElementById("progress");
+        const progressBarContainer = document.getElementById("progressBar");
+        const maxWidth = progressBarContainer.clientWidth; //Larghezza massima in pixel
+        const currentWidth = parseFloat(
+          window.getComputedStyle(progressBar).width
+        ); //Larghezza attuale in pixel
+        const newWidth = currentWidth + maxWidth * 0.1; //Aumenta del 10%
+        if (newWidth <= maxWidth) {
+          progressBar.style.width = newWidth + "px";
+        } else {
+          alert("Barra completa!");
+        }
+      }
+    </script>
+  </body>
+</html>
