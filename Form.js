@@ -1,31 +1,41 @@
 function validateForm() {
   console.log("Inizio funzione validateForm");
 
-  const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
-  const nameError = document.getElementById("nameError");
-  const emailError = document.getElementById("emailError");
 
-  //Verifica che gli elementi esistano
-  if (!nameInput || !emailInput || !nameError || !emailError) {
-    console.error("Elementi non trovati.");
-    return;
+  const submit = document.getElementById("submit");
+  submit.addEventListener("click", validate);
+  function validate(e) {
+    e.preventDefault();
+    const nameInput = document.getElementById("name");
+    let valid = true;
+
+    //Verifica che gli elementi esistano
+    if (!nameInput || !emailInput || !nameError || !emailError) {
+      console.error("Elementi non trovati.");
+      return;
+    }
+
+    //Validazione del nome
+    if (!nameInput.value) {
+      const nameError = document.getElementById("nameError");
+      nameError.classList.add("visible");
+      nameInput.classList.add("invalid");
+      nameError.setAttribute("aria-hidden", false);
+      nameError.setAttribute("aria-invalid", true);
+    }
+    return valid;
   }
 
-  //Validazione del nome
-  if (nameInput.ariaValueMax.trim() === "") {
-    nameError.textContent = "Il campo non può essere vuoto.";
-  } else {
-    nameError.textContent = "";
+  //Validazione dell'email
+  if (!emailPattern.value) {
+    const emailError = document.getElementById("emailError");
+    emailError.classList.add("visible");
+    emailInput.classList.add("invalid");
+    emailError.setAttribute("aria-hidden", false);
+    emailErrorError.setAttribute("aria-invalid", true);
   }
-
-  //Valisazione dell'email
-  const emailPattern = "^[^s@]+@[^s@]+.[^s@]+$";
-  if (!emailPattern.test(emailInput.value.trim())) {
-    emailError.textContent = "Inserisci un indirizzo email valido.";
-  } else {
-    emailError.textContent = "";
-  }
-
-  console.log("Fine funzione validateForm");
+  return valid;
 }
+
+console.log("Fine funzione validateForm");
