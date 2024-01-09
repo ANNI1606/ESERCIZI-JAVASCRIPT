@@ -23,7 +23,8 @@
     <script>
       function toggleVisibility() {
         var element = document.getElementById("elementToToggle");
-        if (element.style.display === "none") {
+        var check = document.getElementById("visibilityCheckbox");
+        if (check.checked) {
           element.style.display = "block";
         } else {
           element.style.display = "none";
