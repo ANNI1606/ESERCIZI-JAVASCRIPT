@@ -13,7 +13,7 @@
   <body>
     <label for="textInput">Inserisci testo:</label>
     <input type="text" id="textInput" oninput="changeStyle()" />
-    <div id="output">Questa è una brutta storia</div>
+    <div id="output"></div>
     <script>
       function changeStyle() {
         const inputElement = document.getElementById("textInput");
@@ -21,8 +21,10 @@
 
         //Modifica lo stile in base al contenuto dell'input
         if (inputElement.value.length > 0) {
+          outputElement.innerHTML = inputElement.value;
           outputElement.style.color = "blue";
         } else {
+          outputElement.innerHTML = inputElement.value;
           outputElement.style.color = "black";
         }
       }
